@@ -131,8 +131,8 @@
 
       .hero-card {
         display: grid;
-        grid-template-columns: minmax(0, 1.25fr) 310px;
-        gap: 28px;
+        grid-template-columns: minmax(0, 1fr) minmax(390px, 0.46fr);
+        gap: 34px;
         align-items: stretch;
         padding: clamp(24px, 4vw, 42px);
         border-top: 5px solid var(--navy);
@@ -231,7 +231,7 @@
       .hero-side {
         display: grid;
         align-content: space-between;
-        gap: 18px;
+        gap: 22px;
         padding-left: 24px;
         border-left: 1px solid var(--line-strong);
       }
@@ -244,13 +244,13 @@
 
       .mini-image {
         overflow: hidden;
-        width: min(100%, 560px);
+        width: 100%;
         border: 1px solid var(--line);
         background: var(--soft);
       }
 
       .case-area .mini-image {
-        width: min(100%, 620px);
+        width: 100%;
       }
 
       .mini-image img {
@@ -307,8 +307,8 @@
 
       .case-area {
         display: grid;
-        grid-template-columns: minmax(0, 0.58fr) minmax(260px, 0.42fr);
-        gap: 22px;
+        grid-template-columns: minmax(0, 0.55fr) minmax(320px, 0.45fr);
+        gap: 28px;
         align-items: center;
       }
 
@@ -511,7 +511,7 @@
         }
 
         .mini-image {
-          max-width: 420px;
+          max-width: 520px;
         }
       }
 
