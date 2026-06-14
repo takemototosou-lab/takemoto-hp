@@ -1,0 +1,635 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="竹本塗装店は奈良県橿原市を拠点に、外壁塗装、屋根塗装、鉄部塗装、木部塗装など各種塗装工事を行っています。"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <title>竹本塗装店 | 奈良県橿原市の塗装工事</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --navy: #0d2442;
+        --navy-soft: #18385e;
+        --text: #20262c;
+        --muted: #65707a;
+        --line: #dfe5ea;
+        --line-strong: #bdc8d2;
+        --paper: #ffffff;
+        --soft: #f5f7f9;
+        --warm: #f7f1e7;
+        --accent: #c78b49;
+        --shadow: 0 16px 40px rgba(13, 36, 66, 0.08);
+        --max: 1080px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        color: var(--text);
+        font-family: "Noto Sans JP", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-weight: 400;
+        line-height: 1.75;
+        background: var(--paper);
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .site-header {
+        background: rgba(255, 255, 255, 0.95);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .header-inner {
+        width: min(100% - 32px, var(--max));
+        min-height: 68px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        color: var(--navy);
+        font-weight: 900;
+        letter-spacing: 0;
+        text-decoration: none;
+      }
+
+      .brand-mark {
+        position: relative;
+        width: 38px;
+        height: 38px;
+        border: 2px solid var(--navy);
+      }
+
+      .brand-mark::before,
+      .brand-mark::after {
+        content: "";
+        position: absolute;
+        inset: 6px;
+        background: var(--navy);
+        clip-path: polygon(0 100%, 100% 0, 100% 100%);
+      }
+
+      .brand-mark::after {
+        inset: 13px 8px 8px 13px;
+        background: var(--paper);
+      }
+
+      .nav {
+        display: flex;
+        gap: 18px;
+        color: var(--navy-soft);
+        font-size: 0.88rem;
+        font-weight: 700;
+      }
+
+      .nav a {
+        text-decoration: none;
+      }
+
+      .nav a:hover {
+        color: var(--accent);
+      }
+
+      .page {
+        width: min(100% - 32px, var(--max));
+        margin: 0 auto;
+        padding: 28px 0 42px;
+      }
+
+      .card {
+        background: var(--paper);
+        border: 1px solid var(--line);
+        box-shadow: var(--shadow);
+      }
+
+      .hero-card {
+        display: grid;
+        grid-template-columns: minmax(0, 1.25fr) 310px;
+        gap: 28px;
+        align-items: stretch;
+        padding: clamp(24px, 4vw, 42px);
+        border-top: 5px solid var(--navy);
+      }
+
+      .eyebrow {
+        margin: 0 0 10px;
+        color: var(--navy-soft);
+        font-size: 0.88rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+      }
+
+      h1,
+      h2,
+      h3,
+      p,
+      dl {
+        margin-top: 0;
+      }
+
+      h1 {
+        margin-bottom: 12px;
+        color: var(--navy);
+        font-size: clamp(2.25rem, 5vw, 4.1rem);
+        font-weight: 900;
+        line-height: 1.05;
+        letter-spacing: 0;
+      }
+
+      h2 {
+        margin-bottom: 18px;
+        color: var(--navy);
+        font-size: clamp(1.25rem, 2vw, 1.65rem);
+        font-weight: 900;
+        line-height: 1.35;
+        letter-spacing: 0;
+      }
+
+      h3 {
+        margin-bottom: 8px;
+        color: var(--navy);
+        font-size: 1rem;
+        font-weight: 800;
+      }
+
+      .lead {
+        max-width: 44rem;
+        margin-bottom: 18px;
+        color: #3f4a54;
+        font-size: 1rem;
+        font-weight: 500;
+      }
+
+      .hero-meta {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0;
+        margin: 22px 0 0;
+        border-top: 1px solid var(--line-strong);
+        border-left: 1px solid var(--line);
+      }
+
+      .hero-meta div {
+        min-height: 72px;
+        padding: 13px 15px;
+        border-right: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .label {
+        display: block;
+        margin-bottom: 2px;
+        color: var(--muted);
+        font-size: 0.75rem;
+        font-weight: 700;
+      }
+
+      .value {
+        color: var(--navy);
+        font-size: 0.98rem;
+        font-weight: 800;
+      }
+
+      .phone-link {
+        display: inline-flex;
+        align-items: center;
+        min-height: 46px;
+        color: var(--navy);
+        font-size: clamp(1.45rem, 3vw, 2.05rem);
+        font-weight: 900;
+        line-height: 1;
+        text-decoration: none;
+      }
+
+      .hero-side {
+        display: grid;
+        align-content: space-between;
+        gap: 18px;
+        padding-left: 24px;
+        border-left: 1px solid var(--line-strong);
+      }
+
+      .permit-box {
+        padding: 18px;
+        background: var(--soft);
+        border: 1px solid var(--line);
+      }
+
+      .mini-image {
+        overflow: hidden;
+        border: 1px solid var(--line);
+        background: var(--soft);
+      }
+
+      .mini-image img {
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+      }
+
+      .section {
+        margin-top: 18px;
+        padding: clamp(22px, 3vw, 30px);
+      }
+
+      .section-grid {
+        display: grid;
+        grid-template-columns: 0.74fr 1.26fr;
+        gap: 28px;
+        align-items: start;
+      }
+
+      .section-title {
+        padding-top: 4px;
+        border-top: 2px solid var(--navy);
+      }
+
+      .section-title p {
+        margin-bottom: 0;
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      .chip-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin: 0 0 18px;
+        padding: 0;
+        list-style: none;
+      }
+
+      .chip-list li {
+        padding: 8px 12px;
+        color: var(--navy);
+        background: var(--soft);
+        border: 1px solid var(--line);
+        font-size: 0.92rem;
+        font-weight: 800;
+      }
+
+      .service-text {
+        margin-bottom: 0;
+        color: var(--muted);
+      }
+
+      .case-area {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 220px;
+        gap: 22px;
+        align-items: center;
+      }
+
+      .notice {
+        padding: 16px 18px;
+        color: #473d31;
+        background: var(--warm);
+        border-left: 3px solid var(--accent);
+      }
+
+      .compact-list {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0;
+        margin: 18px 0 0;
+        border-top: 1px solid var(--line);
+        border-left: 1px solid var(--line);
+      }
+
+      .compact-list div {
+        padding: 12px 14px;
+        border-right: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .contact-layout {
+        display: grid;
+        grid-template-columns: 1fr 1.15fr;
+        gap: 28px;
+      }
+
+      .contact-panel {
+        padding: 20px;
+        color: var(--paper);
+        background: var(--navy);
+      }
+
+      .contact-panel .label,
+      .contact-panel p {
+        color: rgba(255, 255, 255, 0.75);
+      }
+
+      .contact-panel .phone-link {
+        color: var(--paper);
+      }
+
+      .sns-list {
+        display: grid;
+        gap: 8px;
+        margin: 18px 0 0;
+        padding: 0;
+        list-style: none;
+        color: rgba(255, 255, 255, 0.86);
+        font-weight: 700;
+      }
+
+      .info-table {
+        display: grid;
+        margin: 0;
+        border-top: 1px solid var(--line);
+        border-left: 1px solid var(--line);
+      }
+
+      .info-row {
+        display: grid;
+        grid-template-columns: 140px minmax(0, 1fr);
+        border-right: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .info-row dt,
+      .info-row dd {
+        margin: 0;
+        padding: 11px 13px;
+      }
+
+      .info-row dt {
+        color: var(--navy);
+        background: var(--soft);
+        font-size: 0.86rem;
+        font-weight: 800;
+      }
+
+      .info-row dd {
+        color: var(--text);
+        font-size: 0.92rem;
+      }
+
+      .site-footer {
+        padding: 20px 16px 30px;
+        color: var(--muted);
+        text-align: center;
+        font-size: 0.85rem;
+      }
+
+      @media (max-width: 860px) {
+        .nav {
+          display: none;
+        }
+
+        .page {
+          padding-top: 18px;
+        }
+
+        .hero-card,
+        .section-grid,
+        .case-area,
+        .contact-layout {
+          grid-template-columns: 1fr;
+        }
+
+        .hero-side {
+          padding-left: 0;
+          border-left: 0;
+          border-top: 1px solid var(--line-strong);
+          padding-top: 18px;
+        }
+
+        .mini-image {
+          max-width: 320px;
+        }
+      }
+
+      @media (max-width: 560px) {
+        .header-inner {
+          width: min(100% - 24px, var(--max));
+          min-height: 62px;
+        }
+
+        .page {
+          width: min(100% - 24px, var(--max));
+        }
+
+        .hero-card,
+        .section {
+          padding: 20px;
+        }
+
+        .hero-meta,
+        .compact-list {
+          grid-template-columns: 1fr;
+        }
+
+        .hero-meta div {
+          min-height: auto;
+        }
+
+        .phone-link {
+          width: 100%;
+          font-size: 1.55rem;
+        }
+
+        .info-row {
+          grid-template-columns: 1fr;
+        }
+
+        .info-row dt {
+          padding-bottom: 4px;
+        }
+
+        .info-row dd {
+          padding-top: 4px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="#top" aria-label="竹本塗装店">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span>竹本塗装店</span>
+        </a>
+        <nav class="nav" aria-label="ページ内メニュー">
+          <a href="#services">業務内容</a>
+          <a href="#cases">施工事例・対応エリア</a>
+          <a href="#contact">お問い合わせ</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page">
+      <section class="hero-card card" id="top">
+        <div>
+          <p class="eyebrow">奈良県橿原市の建築塗装</p>
+          <h1>竹本塗装店</h1>
+          <p class="lead">
+            奈良県橿原市を拠点に、外壁塗装・屋根塗装・各種建築塗装工事を行っています。
+            建物の状態に合わせて、下地処理から仕上げまで丁寧な施工を心がけています。
+          </p>
+          <a class="phone-link" href="tel:0744355162">0744-35-5162</a>
+          <div class="hero-meta" aria-label="基本情報">
+            <div>
+              <span class="label">代表者</span>
+              <span class="value">竹本直也</span>
+            </div>
+            <div>
+              <span class="label">所在地</span>
+              <span class="value">奈良県橿原市 見瀬町616-2</span>
+            </div>
+            <div>
+              <span class="label">対応エリア</span>
+              <span class="value">奈良県内中心</span>
+            </div>
+            <div>
+              <span class="label">建設業許可</span>
+              <span class="value">奈良県知事許可（般-8）第18816号</span>
+            </div>
+          </div>
+        </div>
+        <aside class="hero-side" aria-label="公式案内">
+          <div class="permit-box">
+            <span class="label">業務内容</span>
+            <strong class="value">外壁塗装・屋根塗装・各種塗装工事</strong>
+          </div>
+          <figure class="mini-image">
+            <!-- 画像配置: images/paint-work.png をトップ右側の小さな挿絵に使用 -->
+            <img src="images/paint-work.png" alt="外壁塗装を行う職人のイメージ" />
+          </figure>
+        </aside>
+      </section>
+
+      <section class="section card" id="services">
+        <div class="section-grid">
+          <div class="section-title">
+            <p class="eyebrow">Services</p>
+            <h2>業務内容</h2>
+            <p>名刺・見積書から確認しやすいよう、対応工事を簡潔にまとめています。</p>
+          </div>
+          <div>
+            <ul class="chip-list" aria-label="対応工事">
+              <li>外壁塗装・屋根塗装</li>
+              <li>防水工事・シーリング工事</li>
+              <li>鉄部塗装・木部塗装</li>
+              <li>各種建築塗装一式</li>
+            </ul>
+            <p class="service-text">
+              建物の状態や素材を確認し、必要な工程を大切にしながら施工します。
+              強い営業表現ではなく、竹本塗装店の基本情報を確認するための公式案内ページです。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section card" id="cases">
+        <div class="section-grid">
+          <div class="section-title">
+            <p class="eyebrow">Works / Area</p>
+            <h2>施工事例・対応エリア</h2>
+            <p>施工写真は今後、Instagramで確認できる形を予定しています。</p>
+          </div>
+          <div class="case-area">
+            <div>
+              <div class="notice">施工写真・現場の様子は、Instagramにて掲載予定です。</div>
+              <div class="compact-list" aria-label="対応エリア">
+                <div>
+                  <span class="label">拠点</span>
+                  <span class="value">奈良県橿原市</span>
+                </div>
+                <div>
+                  <span class="label">対応エリア</span>
+                  <span class="value">奈良県内中心</span>
+                </div>
+              </div>
+            </div>
+            <figure class="mini-image">
+              <!-- 画像配置: images/before-after.png を施工イメージの小さな挿絵に使用 -->
+              <img src="images/before-after.png" alt="塗装前後の施工イメージ" />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="section card" id="contact">
+        <div class="contact-layout">
+          <div class="contact-panel">
+            <span class="label">お問い合わせ</span>
+            <h2>塗装工事のご相談</h2>
+            <p>
+              建物の状態確認や塗装工事についてのご相談は、お電話にてお問い合わせください。
+            </p>
+            <a class="phone-link" href="tel:0744355162">0744-35-5162</a>
+            <ul class="sns-list">
+              <li>LINE公式：準備中</li>
+              <li>Instagram：準備中</li>
+            </ul>
+          </div>
+          <div>
+            <h2>事業者情報</h2>
+            <dl class="info-table">
+              <div class="info-row">
+                <dt>屋号</dt>
+                <dd>竹本塗装店</dd>
+              </div>
+              <div class="info-row">
+                <dt>代表者</dt>
+                <dd>竹本直也</dd>
+              </div>
+              <div class="info-row">
+                <dt>所在地</dt>
+                <dd>奈良県橿原市 見瀬町616-2</dd>
+              </div>
+              <div class="info-row">
+                <dt>対応エリア</dt>
+                <dd>奈良県内中心</dd>
+              </div>
+              <div class="info-row">
+                <dt>業務内容</dt>
+                <dd>外壁塗装、屋根塗装、鉄部塗装、木部塗装、各種塗装工事</dd>
+              </div>
+              <div class="info-row">
+                <dt>建設業許可</dt>
+                <dd>奈良県知事許可（般-8）第18816号</dd>
+              </div>
+              <div class="info-row">
+                <dt>電話番号</dt>
+                <dd><a href="tel:0744355162">0744-35-5162</a></dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <small>&copy; 竹本塗装店</small>
+    </footer>
+  </body>
+</html>
