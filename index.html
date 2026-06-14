@@ -244,8 +244,13 @@
 
       .mini-image {
         overflow: hidden;
+        width: min(100%, 560px);
         border: 1px solid var(--line);
         background: var(--soft);
+      }
+
+      .case-area .mini-image {
+        width: min(100%, 620px);
       }
 
       .mini-image img {
@@ -302,7 +307,7 @@
 
       .case-area {
         display: grid;
-        grid-template-columns: minmax(0, 1fr) 220px;
+        grid-template-columns: minmax(0, 0.58fr) minmax(260px, 0.42fr);
         gap: 22px;
         align-items: center;
       }
@@ -331,7 +336,7 @@
 
       .contact-layout {
         display: grid;
-        grid-template-columns: 1fr 1.15fr;
+        grid-template-columns: 1.08fr 0.92fr;
         gap: 28px;
       }
 
@@ -370,7 +375,7 @@
 
       .contact-method {
         display: grid;
-        grid-template-columns: 58px minmax(0, 1fr);
+        grid-template-columns: 50px minmax(0, 1fr);
         gap: 10px;
         align-items: baseline;
         padding-bottom: 8px;
@@ -392,7 +397,14 @@
         color: var(--paper);
         font-size: 0.95rem;
         font-weight: 800;
-        word-break: break-word;
+        overflow-wrap: normal;
+        word-break: normal;
+      }
+
+      .contact-method.email dd {
+        font-size: 0.86rem;
+        letter-spacing: 0;
+        white-space: nowrap;
       }
 
       .qr-card {
@@ -444,7 +456,7 @@
 
       .info-row {
         display: grid;
-        grid-template-columns: 140px minmax(0, 1fr);
+        grid-template-columns: 132px minmax(0, 1fr);
         border-right: 1px solid var(--line);
         border-bottom: 1px solid var(--line);
       }
@@ -499,7 +511,7 @@
         }
 
         .mini-image {
-          max-width: 320px;
+          max-width: 420px;
         }
       }
 
@@ -538,6 +550,10 @@
 
         .contact-method {
           grid-template-columns: 52px minmax(0, 1fr);
+        }
+
+        .contact-method.email dd {
+          white-space: normal;
         }
 
         .info-row dt {
@@ -598,8 +614,6 @@
           <div class="permit-box">
             <span class="label">業務内容</span>
             <strong class="value">外壁塗装・屋根塗装・各種塗装工事</strong>
-            <span class="label">携帯</span>
-            <strong class="value"><a href="tel:09025961935">090-2596-1935</a></strong>
           </div>
           <figure class="mini-image">
             <!-- 画像配置: images/paint-work.png をトップ右側の小さな挿絵に使用 -->
@@ -677,11 +691,7 @@
                   <dt>携帯</dt>
                   <dd><a href="tel:09025961935">090-2596-1935</a></dd>
                 </div>
-                <div class="contact-method">
-                  <dt>FAX</dt>
-                  <dd>0745-51-1854</dd>
-                </div>
-                <div class="contact-method">
+                <div class="contact-method email">
                   <dt>メール</dt>
                   <dd><a href="mailto:takemototosou@gmail.com">takemototosou@gmail.com</a></dd>
                 </div>
@@ -698,48 +708,20 @@
             <h2>事業者情報</h2>
             <dl class="info-table">
               <div class="info-row">
-                <dt>屋号</dt>
-                <dd>竹本塗装店</dd>
-              </div>
-              <div class="info-row">
-                <dt>代表者</dt>
-                <dd>竹本直也</dd>
-              </div>
-              <div class="info-row">
                 <dt>所在地</dt>
                 <dd>奈良県橿原市見瀬町616-2 マンションあすか201号</dd>
-              </div>
-              <div class="info-row">
-                <dt>対応エリア</dt>
-                <dd>奈良県内中心</dd>
-              </div>
-              <div class="info-row">
-                <dt>業務内容</dt>
-                <dd>外壁塗装、屋根塗装、鉄部塗装、木部塗装、各種塗装工事</dd>
               </div>
               <div class="info-row">
                 <dt>建設業許可</dt>
                 <dd>奈良県知事許可（般-8）第18816号</dd>
               </div>
               <div class="info-row">
-                <dt>インボイス番号</dt>
-                <dd>T2810826383922</dd>
-              </div>
-              <div class="info-row">
-                <dt>電話</dt>
-                <dd><a href="tel:0744355162">0744-35-5162</a></dd>
-              </div>
-              <div class="info-row">
-                <dt>携帯</dt>
-                <dd><a href="tel:09025961935">090-2596-1935</a></dd>
-              </div>
-              <div class="info-row">
                 <dt>FAX</dt>
                 <dd>0745-51-1854</dd>
               </div>
               <div class="info-row">
-                <dt>メール</dt>
-                <dd><a href="mailto:takemototosou@gmail.com">takemototosou@gmail.com</a></dd>
+                <dt>インボイス番号</dt>
+                <dd>T2810826383922</dd>
               </div>
             </dl>
           </div>
