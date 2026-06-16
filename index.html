@@ -438,6 +438,30 @@
         line-height: 1.55;
       }
 
+      .line-link {
+        display: inline-flex;
+        justify-content: center;
+        width: 100%;
+        margin: 4px 0 8px;
+        padding: 8px 10px;
+        color: var(--paper);
+        background: var(--navy);
+        font-size: 0.82rem;
+        font-weight: 900;
+        line-height: 1.3;
+        text-decoration: none;
+      }
+
+      .line-url {
+        display: inline-block;
+        margin-top: 2px;
+        color: var(--muted);
+        font-size: 0.72rem;
+        font-weight: 700;
+        line-height: 1.35;
+        overflow-wrap: anywhere;
+      }
+
       .sns-list {
         display: grid;
         gap: 8px;
@@ -704,7 +728,8 @@
                 <object class="qr-image" data="images/line-qr.png" type="image/png" aria-label="LINE QRコード">
                   LINE QR
                 </object>
-                <p>LINEでのお問い合わせはこちら<br />お気軽にご相談ください</p>
+                <a class="line-link" href="https://line.me/ti/p/mo1gH9IiGY" target="_blank" rel="noopener">LINEで問い合わせる</a>
+                <p>スマホの方はこちらをタップ<br /><span class="line-url">line.me/ti/p/mo1gH9IiGY</span></p>
               </div>
             </div>
           </div>
