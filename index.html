@@ -75,32 +75,17 @@
       .brand {
         display: inline-flex;
         align-items: center;
-        gap: 12px;
+        gap: 0;
         color: var(--navy);
         font-weight: 900;
         letter-spacing: 0;
         text-decoration: none;
       }
 
-      .brand-mark {
-        position: relative;
-        width: 38px;
-        height: 38px;
-        border: 2px solid var(--navy);
-      }
-
-      .brand-mark::before,
-      .brand-mark::after {
-        content: "";
-        position: absolute;
-        inset: 6px;
-        background: var(--navy);
-        clip-path: polygon(0 100%, 100% 0, 100% 100%);
-      }
-
-      .brand-mark::after {
-        inset: 13px 8px 8px 13px;
-        background: var(--paper);
+      .brand-logo {
+        width: clamp(132px, 16vw, 188px);
+        height: auto;
+        object-fit: contain;
       }
 
       .nav {
@@ -597,10 +582,18 @@
       }
 
       .site-footer {
-        padding: 20px 16px 30px;
+        padding: 24px 16px 32px;
         color: var(--muted);
         text-align: center;
         font-size: 0.85rem;
+      }
+
+      .footer-logo {
+        display: block;
+        width: 112px;
+        height: auto;
+        margin: 0 auto 10px;
+        opacity: 0.9;
       }
 
       @media (max-width: 860px) {
@@ -642,6 +635,10 @@
         .header-inner {
           width: min(100% - 24px, var(--max));
           min-height: 62px;
+        }
+
+        .brand-logo {
+          width: 124px;
         }
 
         .page {
@@ -697,8 +694,7 @@
     <header class="site-header">
       <div class="header-inner">
         <a class="brand" href="#top" aria-label="竹本塗装店">
-          <span class="brand-mark" aria-hidden="true"></span>
-          <span>竹本塗装店</span>
+          <img class="brand-logo" src="images/logo-takemoto.png" alt="竹本塗装店" />
         </a>
         <nav class="nav" aria-label="ページ内メニュー">
           <a href="#services">業務内容</a>
@@ -874,6 +870,7 @@
     </main>
 
     <footer class="site-footer">
+      <img class="footer-logo" src="images/logo-takemoto.png" alt="竹本塗装店" />
       <small>&copy; 竹本塗装店</small>
     </footer>
   </body>
